@@ -14,7 +14,7 @@
 #import <FlickrKit/FlickrKit.h>
 #import <objc/runtime.h>
 
-const NSUInteger TSTPhotoProviderDefaultPageSize = 100;
+const NSUInteger NNPhotoProviderDefaultPageSize = 100;
 
 @interface NNPhotoProvider () <NNListener>
 
@@ -27,7 +27,7 @@ const NSUInteger TSTPhotoProviderDefaultPageSize = 100;
 
 - (id)init
 {
-    return [self initWithPageSize:TSTPhotoProviderDefaultPageSize];
+    return [self initWithPageSize:NNPhotoProviderDefaultPageSize];
 }
 
 - (id)initWithPageSize:(NSUInteger)pageSize
@@ -72,7 +72,7 @@ const NSUInteger TSTPhotoProviderDefaultPageSize = 100;
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Any GUI related operations here
                 [weakSelf.dataProvider addObjectsFromArray:photoURLs];
-                
+             //   NSLog(@" -------  count = %lu",[weakSelf.dataProvider count]);
             });
         }
     }];

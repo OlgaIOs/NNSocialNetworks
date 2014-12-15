@@ -17,5 +17,7 @@
 - (BOOL)isSessionStateCreatedTokenLoaded;
 - (void)closeSession;
 - (void)openSession:(void(^)(BOOL result, NSDictionary *user, NSError *error))processingBlock;
+- (void)postStatusFrom:(UIViewController *)sender withText:(NSString *)text andImage:(UIImage *)image;
+- (void)postImage:(UIImage *)image withMessage:(NSString *)message;
 
 @end

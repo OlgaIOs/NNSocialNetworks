@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NNObservable.h"
 
-extern const NSUInteger TSTPhotoProviderDefaultPageSize;
+extern const NSUInteger NNPhotoProviderDefaultPageSize;
 
 @interface NNPhotoProvider : NNObservable
 

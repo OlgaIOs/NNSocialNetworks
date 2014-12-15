@@ -1,4 +1,4 @@
-//
+ //
 //  NNFacebookService.m
 //  NNSocialNetworks
 //
@@ -43,6 +43,7 @@
                                             {
                                             // get user info
                                             [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *fbUser, NSError *error) {
+                                                self.userInfo = fbUser;
                                                 NSDictionary *user = (error) ? nil : fbUser;
                                                 processingBlock(YES, user, nil);
                                             }];
@@ -90,6 +91,97 @@
         }
         [FBSession.activeSession closeAndClearTokenInformation];
     }
+}
+
+- (void)performPublishAction:(void(^)(void))action {
+    // we defer request for permission to post to the moment of post, then we check for the permission
+    if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound) {
+        // if we don't already have the permission, then we request it now
+        [FBSession.activeSession requestNewPublishPermissions:@[@"publish_actions"]
+                                              defaultAudience:FBSessionDefaultAudienceFriends
+                                            completionHandler:^(FBSession *session, NSError *error) {
+                                                if (!error) {
+                                                    action();
+                                                } else if (error.fberrorCategory != FBErrorCategoryUserCancelled) {
+                                                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Permission denied"
+                                                                                                        message:@"Unable to get permission to post"
+                                                                                                       delegate:nil
+                                                                                              cancelButtonTitle:@"OK"
+                                                                                              otherButtonTitles:nil];
+                                                    [alertView show];
+                                                }
+                                            }];
+    } else {
+        action();
+    }
+    
+}
+
+- (void)postStatusFrom:(UIViewController *)sender withText:(NSString *)text andImage:(UIImage *)image
+{
+    //using Request and requestForPostStatusUpdate
+    [self performPublishAction:^{
+       NSString *message =  text;
+            
+       FBRequestConnection *connection = [[FBRequestConnection alloc] init];
+            
+       connection.errorBehavior = FBRequestConnectionErrorBehaviorReconnectSession
+            | FBRequestConnectionErrorBehaviorAlertUser
+            | FBRequestConnectionErrorBehaviorRetry;
+            
+       [connection addRequest:[FBRequest requestForPostStatusUpdate:message]
+            completionHandler:^(FBRequestConnection *innerConnection, id result, NSError *error)
+            {
+                if (error)
+                {
+                    NSLog(@"Error: %@", error);
+                }
+                else
+                {
+                    NSLog(@"Everything is Ok");
+                }
+            }];
+            
+       [connection addRequest:[FBRequest requestForUploadPhoto:image]
+            completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+            {
+                if (error)
+                {
+                    NSLog(@"Error: %@", error);
+                }
+                else
+                {
+                    NSLog(@"Everything is Ok");
+                }
+            }];
+            
+       [connection start];
+    }];
+}
+
+- (void)postImage:(UIImage *)image withMessage:(NSString *)message
+{
+    // using GraphPath
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
+    [params setObject:message forKey:@"message"];
+    [params setObject:UIImagePNGRepresentation(image) forKey:@"picture"];
+    
+    [FBRequestConnection startWithGraphPath:@"me/photos"
+                                 parameters:params
+                                 HTTPMethod:@"POST"
+                          completionHandler:^(FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"Error: %@", error);
+         }
+         else
+         {
+             NSLog(@"Everything is Ok");
+         }
+     }];
 }
 
 @end

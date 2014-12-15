@@ -36,7 +36,7 @@
     }];
 }
 
-#pragma mark - TSTListener protocol methods
+#pragma mark - NNListener protocol methods
 
 - (void)observableObjectWillChangeContent:(id <NNObservable>)observable userInfo:(NSMutableDictionary *)userInfo {
     [self.tableView beginUpdates];
