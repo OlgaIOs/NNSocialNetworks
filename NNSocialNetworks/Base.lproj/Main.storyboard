@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUg-EN-SSy">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUg-EN-SSy">
                                 <rect key="frame" x="57" y="240" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -31,7 +31,7 @@
                                     <action selector="loginButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ac5-6k-zWC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ9-UZ-xxe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ9-UZ-xxe">
                                 <rect key="frame" x="57" y="154" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="B8K-si-QZg"/>
@@ -49,10 +49,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QQ9-UZ-xxe" secondAttribute="trailing" constant="41" id="VgX-Lv-Nov"/>
                             <constraint firstItem="QQ9-UZ-xxe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="aqZ-eG-ouY"/>
                             <constraint firstAttribute="trailing" secondItem="RUg-EN-SSy" secondAttribute="trailing" constant="57" id="nlL-VL-goe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RUg-EN-SSy" secondAttribute="bottom" constant="436" id="q63-Mh-1Ik"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bOK-z2-WQY">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Xef-0y-nDm">
+                        <barButtonItem key="rightBarButtonItem" title="Gallery" id="Xef-0y-nDm">
                             <connections>
                                 <segue destination="ybd-qa-c5q" kind="show" id="iZN-3W-whg"/>
                             </connections>
