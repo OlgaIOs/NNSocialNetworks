@@ -14,6 +14,13 @@
 		772231C01A3ADF27008C5347 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772231BF1A3ADF27008C5347 /* Images.xcassets */; };
 		772231C31A3ADF27008C5347 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 772231C11A3ADF27008C5347 /* LaunchScreen.xib */; };
 		772231CF1A3ADF27008C5347 /* NNSocialNetworksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 772231CE1A3ADF27008C5347 /* NNSocialNetworksTests.m */; };
+		772231DC1A3AE539008C5347 /* NNFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 772231DB1A3AE539008C5347 /* NNFacebookService.m */; };
+		7755379C1A3C6EFE00E042E0 /* NNPhotoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7755379B1A3C6EFE00E042E0 /* NNPhotoProvider.m */; };
+		7755379F1A3C71DA00E042E0 /* NNDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7755379E1A3C71DA00E042E0 /* NNDataProvider.m */; };
+		775537A51A3C803A00E042E0 /* NNGaleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775537A41A3C803A00E042E0 /* NNGaleryViewController.m */; };
+		775537A81A3C88BA00E042E0 /* NNMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 775537A71A3C88BA00E042E0 /* NNMediator.m */; };
+		775537AC1A3C940A00E042E0 /* NNObservable.m in Sources */ = {isa = PBXBuildFile; fileRef = 775537AB1A3C940A00E042E0 /* NNObservable.m */; };
+		F30D0CEB432DBA66514C5267 /* libPods-NNSocialNetworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9502CC6AAA77763C51A5EFBE /* libPods-NNSocialNetworks.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,22 @@
 		772231C81A3ADF27008C5347 /* NNSocialNetworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNSocialNetworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		772231CD1A3ADF27008C5347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772231CE1A3ADF27008C5347 /* NNSocialNetworksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNSocialNetworksTests.m; sourceTree = "<group>"; };
+		772231DA1A3AE539008C5347 /* NNFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNFacebookService.h; sourceTree = "<group>"; };
+		772231DB1A3AE539008C5347 /* NNFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNFacebookService.m; sourceTree = "<group>"; };
+		7755379A1A3C6EFE00E042E0 /* NNPhotoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPhotoProvider.h; sourceTree = "<group>"; };
+		7755379B1A3C6EFE00E042E0 /* NNPhotoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPhotoProvider.m; sourceTree = "<group>"; };
+		7755379D1A3C71DA00E042E0 /* NNDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNDataProvider.h; sourceTree = "<group>"; };
+		7755379E1A3C71DA00E042E0 /* NNDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNDataProvider.m; sourceTree = "<group>"; };
+		775537A31A3C803A00E042E0 /* NNGaleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNGaleryViewController.h; sourceTree = "<group>"; };
+		775537A41A3C803A00E042E0 /* NNGaleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNGaleryViewController.m; sourceTree = "<group>"; };
+		775537A61A3C88BA00E042E0 /* NNMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMediator.h; sourceTree = "<group>"; };
+		775537A71A3C88BA00E042E0 /* NNMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMediator.m; sourceTree = "<group>"; };
+		775537A91A3C919A00E042E0 /* NNObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNObservable.h; sourceTree = "<group>"; };
+		775537AB1A3C940A00E042E0 /* NNObservable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNObservable.m; sourceTree = "<group>"; };
+		868AA64083C8E67C4F84AB59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9502CC6AAA77763C51A5EFBE /* libPods-NNSocialNetworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NNSocialNetworks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A259227F9D987C3356266D17 /* Pods-NNSocialNetworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNSocialNetworks.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNSocialNetworks/Pods-NNSocialNetworks.release.xcconfig"; sourceTree = "<group>"; };
+		B5C11BA63B17E459A3867783 /* Pods-NNSocialNetworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNSocialNetworks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNSocialNetworks/Pods-NNSocialNetworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30D0CEB432DBA66514C5267 /* libPods-NNSocialNetworks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +90,8 @@
 				772231B11A3ADF27008C5347 /* NNSocialNetworks */,
 				772231CB1A3ADF27008C5347 /* NNSocialNetworksTests */,
 				772231B01A3ADF27008C5347 /* Products */,
+				E32ACB96C987B1FC900A3F44 /* Pods */,
+				D26490BE0B7951EF99113D83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +107,16 @@
 		772231B11A3ADF27008C5347 /* NNSocialNetworks */ = {
 			isa = PBXGroup;
 			children = (
+				775537991A3C6EDA00E042E0 /* DataProvider */,
+				775537951A3C680E00E042E0 /* API */,
+				7755378E1A3C58A900E042E0 /* Model */,
+				772231D81A3ADF4E008C5347 /* Services */,
 				772231B61A3ADF27008C5347 /* AppDelegate.h */,
 				772231B71A3ADF27008C5347 /* AppDelegate.m */,
 				772231B91A3ADF27008C5347 /* ViewController.h */,
 				772231BA1A3ADF27008C5347 /* ViewController.m */,
+				775537A31A3C803A00E042E0 /* NNGaleryViewController.h */,
+				775537A41A3C803A00E042E0 /* NNGaleryViewController.m */,
 				772231BC1A3ADF27008C5347 /* Main.storyboard */,
 				772231BF1A3ADF27008C5347 /* Images.xcassets */,
 				772231C11A3ADF27008C5347 /* LaunchScreen.xib */,
@@ -119,6 +151,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		772231D81A3ADF4E008C5347 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				772231D91A3ADF59008C5347 /* FacebookService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		772231D91A3ADF59008C5347 /* FacebookService */ = {
+			isa = PBXGroup;
+			children = (
+				772231DA1A3AE539008C5347 /* NNFacebookService.h */,
+				772231DB1A3AE539008C5347 /* NNFacebookService.m */,
+			);
+			name = FacebookService;
+			sourceTree = "<group>";
+		};
+		7755378E1A3C58A900E042E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		775537951A3C680E00E042E0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		775537991A3C6EDA00E042E0 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				7755379D1A3C71DA00E042E0 /* NNDataProvider.h */,
+				7755379E1A3C71DA00E042E0 /* NNDataProvider.m */,
+				7755379A1A3C6EFE00E042E0 /* NNPhotoProvider.h */,
+				7755379B1A3C6EFE00E042E0 /* NNPhotoProvider.m */,
+				775537A61A3C88BA00E042E0 /* NNMediator.h */,
+				775537A71A3C88BA00E042E0 /* NNMediator.m */,
+				775537A91A3C919A00E042E0 /* NNObservable.h */,
+				775537AB1A3C940A00E042E0 /* NNObservable.m */,
+			);
+			name = DataProvider;
+			sourceTree = "<group>";
+		};
+		D26490BE0B7951EF99113D83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9502CC6AAA77763C51A5EFBE /* libPods-NNSocialNetworks.a */,
+				868AA64083C8E67C4F84AB59 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32ACB96C987B1FC900A3F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5C11BA63B17E459A3867783 /* Pods-NNSocialNetworks.debug.xcconfig */,
+				A259227F9D987C3356266D17 /* Pods-NNSocialNetworks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 772231D21A3ADF27008C5347 /* Build configuration list for PBXNativeTarget "NNSocialNetworks" */;
 			buildPhases = (
+				57DB241E63E3D9D34B72E829 /* Check Pods Manifest.lock */,
 				772231AB1A3ADF27008C5347 /* Sources */,
 				772231AC1A3ADF27008C5347 /* Frameworks */,
 				772231AD1A3ADF27008C5347 /* Resources */,
+				A82EC6B408C428A547A06A32 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +312,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		57DB241E63E3D9D34B72E829 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A82EC6B408C428A547A06A32 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NNSocialNetworks/Pods-NNSocialNetworks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		772231AB1A3ADF27008C5347 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775537AC1A3C940A00E042E0 /* NNObservable.m in Sources */,
 				772231BB1A3ADF27008C5347 /* ViewController.m in Sources */,
+				7755379F1A3C71DA00E042E0 /* NNDataProvider.m in Sources */,
+				775537A51A3C803A00E042E0 /* NNGaleryViewController.m in Sources */,
+				7755379C1A3C6EFE00E042E0 /* NNPhotoProvider.m in Sources */,
+				772231DC1A3AE539008C5347 /* NNFacebookService.m in Sources */,
 				772231B81A3ADF27008C5347 /* AppDelegate.m in Sources */,
 				772231B51A3ADF27008C5347 /* main.m in Sources */,
+				775537A81A3C88BA00E042E0 /* NNMediator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +478,7 @@
 		};
 		772231D31A3ADF27008C5347 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C11BA63B17E459A3867783 /* Pods-NNSocialNetworks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NNSocialNetworks/Info.plist;
@@ -351,6 +489,7 @@
 		};
 		772231D41A3ADF27008C5347 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A259227F9D987C3356266D17 /* Pods-NNSocialNetworks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NNSocialNetworks/Info.plist;
@@ -412,6 +551,7 @@
 				772231D41A3ADF27008C5347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		772231D51A3ADF27008C5347 /* Build configuration list for PBXNativeTarget "NNSocialNetworksTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +560,7 @@
 				772231D71A3ADF27008C5347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

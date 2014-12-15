@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "NNFacebookService.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NNFacebookService *fbService;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
 
@@ -16,12 +21,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    __block ViewController *weakSelf = self;
+
+    self.fbService = [[NNFacebookService alloc] init];
+    
+    if ([self.fbService isSessionStateCreatedTokenLoaded])
+    {
+        [self.fbService openSession:^(BOOL result, NSDictionary *userInfo, NSError *error)
+         {
+             if (result)
+             {
+                 [weakSelf setupLoginButton];
+                 [weakSelf setupUserLabel:userInfo];
+             }
+         } ];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupLoginButton
+{
+    [self.loginButton setTitle: (self.fbService.isSessionOpen) ? @"LOG OUT" : @"LOG IN" forState:UIControlStateNormal];
+}
+
+- (IBAction)loginButtonClick:(id)sender
+{
+    __block ViewController *weakSelf = self;
+    
+    if (self.fbService.isSessionOpen)
+    {
+        [self.fbService closeSession];
+        [self setupLoginButton];
+        [self setupUserLabel:nil];
+    }
+    else
+    {
+        [self.fbService openSession:^(BOOL result, NSDictionary *userInfo, NSError *error)
+         {
+             if (result)
+             {
+                 [weakSelf setupLoginButton];
+                 [weakSelf setupUserLabel:userInfo];
+             }
+        } ];
+    }
+}
+
+- (void)setupUserLabel:(NSDictionary *)userInfo
+{
+    [self.nameLabel setText:(userInfo) ? [userInfo valueForKey:@"name"] : @""];
 }
 
 @end
