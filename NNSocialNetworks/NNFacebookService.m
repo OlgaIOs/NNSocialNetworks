@@ -184,6 +184,21 @@
      }];
 }
 
+- (void)testGraph
+{
+    [FBRequestConnection startWithGraphPath:@"me/events?fields=cover,name,start_time"
+                          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                              if (!error) {
+                                  // Sucess! Include your code to handle the results here
+                                  NSLog(@"user events: %@", result);
+                              } else {
+                                  // An error occurred, we need to handle the error
+                                  // See: https://developers.facebook.com/docs/ios/errors
+                              }
+    }];
+}
+
+
 @end
     
     

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "NNFacebookService.h"
 
-@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) NNFacebookService *fbService;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -26,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.postTextField.delegate = self;
     
     __block ViewController *weakSelf = self;
 
@@ -119,6 +121,12 @@
             NSLog(@"image:  %@", weakSelf.postImage);
         }
     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

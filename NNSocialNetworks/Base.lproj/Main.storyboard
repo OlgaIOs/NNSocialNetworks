@@ -84,14 +84,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="postToFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1nW-72-FAc"/>
+                                    <action selector="postToFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pez-VI-1qa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ccb-XS-MdD" firstAttribute="top" secondItem="XKU-cE-aMA" secondAttribute="bottom" constant="9" id="1lw-dz-3GT"/>
-                            <constraint firstItem="RUg-EN-SSy" firstAttribute="top" secondItem="HA8-19-P8K" secondAttribute="bottom" constant="210" id="4AS-na-f0G"/>
+                            <constraint firstItem="RUg-EN-SSy" firstAttribute="top" relation="lessThanOrEqual" secondItem="HA8-19-P8K" secondAttribute="bottom" constant="210" id="4AS-na-f0G"/>
                             <constraint firstItem="QQ9-UZ-xxe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="4WH-nc-HF6"/>
                             <constraint firstAttribute="trailing" secondItem="HA8-19-P8K" secondAttribute="trailing" constant="16" id="4WW-dj-poc"/>
                             <constraint firstItem="pwT-8Z-b5x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5FO-RV-EOX"/>
